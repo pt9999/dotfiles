@@ -1,8 +1,14 @@
 #!/bin/sh
 
+dotfiles=$(cd $(dirname $0) && pwd)
+
+cd $dotfiles
+git submodule init
+git submodule update
+
 cd ~
-ln -sf dotfiles/.vim .
-ln -sf dotfiles/.vimrc .
-ln -sf dotfiles/.aliases .
+ln -sfv $dotfiles/.vim .
+ln -sfv $dotfiles/.vimrc .
+ln -sfv $dotfiles/.aliases .
 
 
