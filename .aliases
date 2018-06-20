@@ -1,9 +1,0 @@
-alias reinit='. ~/.bashrc'
-alias via='vi ~/.bashrc'
-alias viaa='vi ~/.aliases'
-alias virc='vi ~/.vimrc'
-alias ll='ls -la'
-alias cp='cp -i'
-alias rm='rm -i'
-alias mv='mv -i'
-

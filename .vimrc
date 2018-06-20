@@ -1,5 +1,10 @@
 "--------------------------------------------------------------
 " NeoBundle Settings
+" Gitのサブモジュール化しているので個別インストールは不要だが、
+" もしインストールする場合は以下のようにすること。
+" $ mkdir -p ~/.vim/bundle
+" $ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+" 
 
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
