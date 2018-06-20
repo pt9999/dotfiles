@@ -30,5 +30,5 @@ function link_file() {
 link_dir .vim
 link_file .vimrc
 link_file .bash_aliases
-
+link_file .screenrc
 
