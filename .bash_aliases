@@ -11,10 +11,15 @@ alias gitpull='git pull origin master'
 
 export EDITOR=/usr/bin/vi
 
-PS1='${debian_chroot:+($debian_chroot)}\u@\h${WINDOW:+[$WINDOW]}:\w\$ '
-case "$TERM" in
-xterm*|rxvt*|screen*)     # If this is an xterm set the title to user@host:dir
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-esac
 
+if [[ "$MACHTYPE" =~ cygwin ]]; then
+    PS1_MACHTYPE='\e[1;33mcygwin'
+elif [[ "$MACHTYPE" =~ msys ]]; then
+    PS1_MACHTYPE=msys
+else
+    PS1_MACHTYPE=$(uname -m)
+fi
+if [ -n "$WINDOW" ]; then
+   PS1_WINDOW='['"$WINDOW"']'
+fi
+PS1="\n$PS1_MACHTYPE \D{%Y/%m/%d %H:%M:%S} \w \e[m\n\u@\h$PS1_WINDOW\$ "
