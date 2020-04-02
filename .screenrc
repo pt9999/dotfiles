@@ -1,3 +1,9 @@
 escape ^L^L
 term "screen.xterm-new"
 defscrollback 1000
+bind - source ~/.screenrc
+bind ^a other
+bind -c ctrlx 2 split -v
+bind -c ctrlx 1 only
+bind -c ctrlx o focus next
+bind ^x command -c ctrlx
